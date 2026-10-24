@@ -204,3 +204,9 @@ print(df.describe())
 - [Predicting polymer melt flow index and catalytic activity using a pretrained transformer-based model — Polymer Bulletin](https://link.springer.com/article/10.1007/s00289-026-06341-5)
 - [US10577435 — Ethylene gas phase polymerisation process](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/10577435)
 - [US9926390 — Method for production of polymer](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9926390)
+
+---
+
+## Implementation status (TRL 4 scaffold)
+
+Branch `trl4-scaffold` adds `src/ampt/` (synthetic 19-grade simulator, MFI/density virtual sensor, transition dynamics and waste accounting), `tests/` (6 tests), CI and [`docs/TRL.md`](docs/TRL.md) with the evidence and the limits. Run: `pip install -e ".[dev]" && pytest`.

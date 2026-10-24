@@ -1,0 +1,16 @@
+[project]
+name = "ampt"
+version = "0.1.0"
+description = "Arya Sasol multi-grade PE - TRL 4 components"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
