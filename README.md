@@ -210,3 +210,8 @@ print(df.describe())
 ## Implementation status (TRL 4 scaffold)
 
 Branch `trl4-scaffold` adds `src/ampt/` (synthetic 19-grade simulator, MFI/density virtual sensor, transition dynamics and waste accounting), `tests/` (6 tests), CI and [`docs/TRL.md`](docs/TRL.md) with the evidence and the limits. Run: `pip install -e ".[dev]" && pytest`.
+
+
+## Articles
+
+See [docs/ARTICLE.md](docs/ARTICLE.md) for the article prepared from this product (in preparation).
