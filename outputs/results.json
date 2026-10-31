@@ -1,0 +1,5577 @@
+{
+  "data_validation": {
+    "sheet_shape_incl_note_rows": [
+      337,
+      34
+    ],
+    "header_row": 5,
+    "data_rows": 331,
+    "columns": 34,
+    "missing_values": 0,
+    "sample_numbers_consecutive": true,
+    "grades": {
+      "8001": 211,
+      "7501": 72,
+      "7001": 45,
+      "7003": 3
+    },
+    "grade_runs": 39,
+    "grade_changes": 38,
+    "mi_ranges": {
+      "MI1": [
+        1.24000001,
+        514.0
+      ],
+      "MI2": [
+        0.109999999,
+        23.0
+      ],
+      "MI3": [
+        0.01,
+        0.629999995
+      ]
+    },
+    "mi_nonpositive": 0,
+    "units_note": "inputs are min-max scaled (0-1) in the file; MI units/scale are not documented in the file",
+    "constant_input_columns": []
+  },
+  "xls_sha256": "c3fcddb6b50c646f3157935ce37965cf58b90f492e6118a1ebbbe092748548d9",
+  "protocol": {
+    "primary_feature_set": "process_all",
+    "transition_window_samples": 3,
+    "lab_delay_samples": [
+      1,
+      3
+    ],
+    "min_train_samples": 100,
+    "alpha_grid": [
+      0.01,
+      0.1,
+      1,
+      10,
+      100,
+      1000
+    ],
+    "bootstrap": "2000 resamples of grade runs (blocks), seed 0"
+  },
+  "chronological": {
+    "process_r3|ridge|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.1053205830317372,
+            "mape_pct": 611557.7793060181,
+            "rmse_ci95": [
+              0.4970698799295986,
+              1.8271453798372002
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.40830665400128724,
+              0.6680789992959872
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.03404676822972532,
+            1.2606208487587527
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.1053205830317372,
+            "mape_pct": 611557.7793060181,
+            "rmse_ci95": [
+              0.49565040038786196,
+              1.8008859905736632
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.4081471324174148,
+              0.6675008849273811
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.38776465427073925,
+            "mape_pct": 24.614619217391702,
+            "rmse_ci95": [
+              0.3030725243414961,
+              0.4899640862432067
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.03855431585258683,
+            1.3046824766585805
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.1140979247362299,
+            1.406308186344797
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "5/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7950594757737992,
+            "mape_pct": 100.36301168448796,
+            "rmse_ci95": [
+              0.6224357506584628,
+              0.9443990925125201
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6820822776551827,
+              1.1248047355921682
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.3364022231393081,
+            0.12282762354599591
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7950594757737992,
+            "mape_pct": 100.36301168448796,
+            "rmse_ci95": [
+              0.6207170991754138,
+              0.9458204750584003
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6744118341678177,
+              1.1212841919788292
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5890323069421975,
+            "mape_pct": 44.20612038275737,
+            "rmse_ci95": [
+              0.4213006677319397,
+              0.7326764995674441
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.3345572427225634,
+            0.1286799810477151
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.013015896337935217,
+            0.41451947851677506
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.1991837614586858,
+            "mape_pct": 835879.4349879633,
+            "rmse_ci95": [
+              0.3711397799356047,
+              2.1161171043971234
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19556059448690236,
+              0.4070543168150182
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.06759928625253322,
+            1.8139538533314723
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.1991837614586858,
+            "mape_pct": 835879.4349879633,
+            "rmse_ci95": [
+              0.3567787706633169,
+              2.142520135537627
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19439126166838452,
+              0.4106927401518133
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19169576474098962,
+              0.4048054664745492
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.0606233727719354,
+            1.825943622672124
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.06813623919941265,
+            1.8586592200667829
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "2/17"
+        }
+      }
+    },
+    "process_r3|ridge|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.1371097029418789,
+            "mape_pct": 783760.2675823153,
+            "rmse_ci95": [
+              0.5301463857291103,
+              1.8550162731784177
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6259078160155293,
+              0.9761119275254918
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.25890908392966583,
+            0.9712578602886696
+          ],
+          "sensor_wins_vs_latest_lab_runs": "16/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.1371097029418789,
+            "mape_pct": 783760.2675823153,
+            "rmse_ci95": [
+              0.5260234523257851,
+              1.8737541959691768
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6271856471539142,
+              0.9752349435476259
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.45352959635725965,
+            "mape_pct": 31.932443143969675,
+            "rmse_ci95": [
+              0.34950594174411537,
+              0.584894559101626
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.2576744830272234,
+            1.020874674885281
+          ],
+          "sensor_wins_vs_latest_lab_runs": "16/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.07914696529216125,
+            1.2976294615601454
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.8073742056550308,
+            "mape_pct": 104.41584310940323,
+            "rmse_ci95": [
+              0.61991885858683,
+              0.9658790592450256
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1261543054918635,
+              1.5971095934786743
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.7734798624028272,
+            -0.3443186888549613
+          ],
+          "sensor_wins_vs_latest_lab_runs": "17/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.8073742056550308,
+            "mape_pct": 104.41584310940323,
+            "rmse_ci95": [
+              0.6206733248726495,
+              0.9753641806939092
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1285294609436862,
+              1.6094599552617765
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.6356924445770166,
+            "mape_pct": 48.83686984640339,
+            "rmse_ci95": [
+              0.4693004027534657,
+              0.779314781170473
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.7872093442650456,
+            -0.34163646307391576
+          ],
+          "sensor_wins_vs_latest_lab_runs": "17/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.06577594709935129,
+            0.39669531281380127
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "10/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.23621960330544,
+            "mape_pct": 1071255.3137824975,
+            "rmse_ci95": [
+              0.42298359337244806,
+              2.204915011293319
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2797068214202605,
+              0.48277729619237014
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.0530941997533474,
+            1.7111719243085075
+          ],
+          "sensor_wins_vs_latest_lab_runs": "6/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.23621960330544,
+            "mape_pct": 1071255.3137824975,
+            "rmse_ci95": [
+              0.4219381123450247,
+              2.1624468536868924
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.28331846789820836,
+              0.4854636288096158
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2777314451401582,
+              0.47828101721740973
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.05047558977233915,
+            1.6846760367217868
+          ],
+          "sensor_wins_vs_latest_lab_runs": "6/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.05766156865432507,
+            1.7178214392616473
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "6/17"
+        }
+      }
+    },
+    "process_r3|ridge_clip|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.5037351588554769,
+            "mape_pct": 47.098724104354886,
+            "rmse_ci95": [
+              0.38946931815085234,
+              0.6503339734210326
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.4103712874458889,
+              0.65933568523256
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.09632152512403132,
+            0.058241742960672555
+          ],
+          "sensor_wins_vs_latest_lab_runs": "10/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.5037351588554769,
+            "mape_pct": 47.098724104354886,
+            "rmse_ci95": [
+              0.3925692256636787,
+              0.6557340157753172
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.41180890054451613,
+              0.6682371804403402
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.38776465427073925,
+            "mape_pct": 24.614619217391702,
+            "rmse_ci95": [
+              0.31082910977182293,
+              0.48959412469297436
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.09884910173284983,
+            0.05561982803842721
+          ],
+          "sensor_wins_vs_latest_lab_runs": "10/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.022078274194874424,
+            0.2284337724839645
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "6/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7295305228167446,
+            "mape_pct": 84.50611047885967,
+            "rmse_ci95": [
+              0.5779500970893899,
+              0.8727046654454096
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6725512134229558,
+              1.1372108755387007
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.373102096838278,
+            0.03848179850739211
+          ],
+          "sensor_wins_vs_latest_lab_runs": "13/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7295305228167446,
+            "mape_pct": 84.50611047885967,
+            "rmse_ci95": [
+              0.5715839923721402,
+              0.8721330912376185
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6827027715284827,
+              1.105345107926763
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5890323069421975,
+            "mape_pct": 44.20612038275737,
+            "rmse_ci95": [
+              0.42658225394574445,
+              0.7362581539185138
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.37398667566375976,
+            0.033680646629332074
+          ],
+          "sensor_wins_vs_latest_lab_runs": "13/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.061263740572579245,
+            0.32146179806678143
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.3893457407044468,
+            "mape_pct": 33.37530425098626,
+            "rmse_ci95": [
+              0.3026508510695813,
+              0.510675364401562
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.1922198120936171,
+              0.40879473902910785
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.017378277672858367,
+            0.2355475087896431
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.3893457407044468,
+            "mape_pct": 33.37530425098626,
+            "rmse_ci95": [
+              0.3018001663838682,
+              0.519753656886263
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.1924070848645283,
+              0.407927629725274
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19428609908106645,
+              0.4136757250889117
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.01201643716977911,
+            0.2379336815022936
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.011589352144331046,
+            0.23975868499224562
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "3/17"
+        }
+      }
+    },
+    "process_r3|ridge_clip|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.5208824951059712,
+            "mape_pct": 49.958385846220715,
+            "rmse_ci95": [
+              0.40604323725580893,
+              0.6697119571581189
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6293983067784525,
+              0.9671116130169346
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.3487331350543025,
+            -0.17169689545944958
+          ],
+          "sensor_wins_vs_latest_lab_runs": "20/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.5208824951059712,
+            "mape_pct": 49.958385846220715,
+            "rmse_ci95": [
+              0.4046781259319658,
+              0.6675800352479035
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6289069077621414,
+              0.9730406336557101
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.45352959635725965,
+            "mape_pct": 31.932443143969675,
+            "rmse_ci95": [
+              0.3464591105026055,
+              0.57942312208565
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.3462586518657979,
+            -0.17335189603249457
+          ],
+          "sensor_wins_vs_latest_lab_runs": "20/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.039710681585621736,
+            0.18550203078021657
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.748595133951382,
+            "mape_pct": 89.02287804724855,
+            "rmse_ci95": [
+              0.5764389382916748,
+              0.8963663661451281
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1193368905508703,
+              1.5950985034461531
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.8069769155923918,
+            -0.43726127801612763
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.748595133951382,
+            "mape_pct": 89.02287804724855,
+            "rmse_ci95": [
+              0.5834300516541086,
+              0.9051038945858895
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.139473856660958,
+              1.6124079657202275
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.6356924445770166,
+            "mape_pct": 48.83686984640339,
+            "rmse_ci95": [
+              0.49146945798305913,
+              0.785971570039216
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.8112588637643053,
+            -0.43914337508090673
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.08566177032603049,
+            0.32928884517467016
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "10/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.4065304249465039,
+            "mape_pct": 35.6270336777963,
+            "rmse_ci95": [
+              0.31745292869328084,
+              0.541077120164951
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2762999078476361,
+              0.48252716173900884
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.03166201024668135,
+            0.12657814528197395
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.4065304249465039,
+            "mape_pct": 35.6270336777963,
+            "rmse_ci95": [
+              0.3120200714645686,
+              0.5285933914374111
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2800362888158364,
+              0.48517767071637496
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2770877016157527,
+              0.4844922286613511
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.03624467252779833,
+            0.12204276809982631
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.03264607764965992,
+            0.12207502257948188
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/17"
+        }
+      }
+    },
+    "process_all|ridge|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.8524291791852928,
+            "mape_pct": 4782.397829971433,
+            "rmse_ci95": [
+              0.45677097484342893,
+              1.1459844237170134
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.4119225778698602,
+              0.6681010907056394
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.07936124679405027,
+            0.6704058294365138
+          ],
+          "sensor_wins_vs_latest_lab_runs": "10/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.8524291791852928,
+            "mape_pct": 4782.397829971433,
+            "rmse_ci95": [
+              0.4853316816615118,
+              1.1475530655499995
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.40677329117733446,
+              0.6641543728350265
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.38776465427073925,
+            "mape_pct": 24.614619217391702,
+            "rmse_ci95": [
+              0.3047742054989952,
+              0.4949217907794266
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.08150774985471086,
+            0.6967331634354581
+          ],
+          "sensor_wins_vs_latest_lab_runs": "10/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.08023836096659263,
+            0.794808799911018
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "5/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7365519005496708,
+            "mape_pct": 84.67359757416465,
+            "rmse_ci95": [
+              0.5801757765503818,
+              0.8715276696607894
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6813780186159633,
+              1.1198149432845323
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.3876267700683919,
+            0.06050037446244688
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7365519005496708,
+            "mape_pct": 84.67359757416465,
+            "rmse_ci95": [
+              0.5862860343247485,
+              0.8783114677147358
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6719890925644111,
+              1.1093725935531245
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5890323069421975,
+            "mape_pct": 44.20612038275737,
+            "rmse_ci95": [
+              0.43954665103163876,
+              0.7244024036553468
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.3797436615167628,
+            0.06757608878016966
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.03013957824849689,
+            0.33190455162029775
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.8911705693461515,
+            "mape_pct": 6505.823288010663,
+            "rmse_ci95": [
+              0.3350501685889031,
+              1.257315931042601
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19168900523116542,
+              0.4069106851882242
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.04373739730563708,
+            0.9696577769153532
+          ],
+          "sensor_wins_vs_latest_lab_runs": "4/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.8911705693461515,
+            "mape_pct": 6505.823288010663,
+            "rmse_ci95": [
+              0.33397367464237665,
+              1.2409099613348973
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.1920196917021442,
+              0.4124871075176874
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19424072628236913,
+              0.40977411361792687
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.04814374333529269,
+            0.9778150529929303
+          ],
+          "sensor_wins_vs_latest_lab_runs": "4/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.04717079846622659,
+            0.9840004929868357
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "4/17"
+        }
+      }
+    },
+    "process_all|ridge|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.078627233619297,
+            "mape_pct": 56321.9164889098,
+            "rmse_ci95": [
+              0.5021446157096929,
+              1.4661412877587179
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6308921013889709,
+              0.9601236791843459
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.30289039831844383,
+            0.738397677895545
+          ],
+          "sensor_wins_vs_latest_lab_runs": "16/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.078627233619297,
+            "mape_pct": 56321.9164889098,
+            "rmse_ci95": [
+              0.5007303784390454,
+              1.4744563437274512
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.637145629288607,
+              0.9812912978472107
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.45352959635725965,
+            "mape_pct": 31.932443143969675,
+            "rmse_ci95": [
+              0.3436789928858286,
+              0.5868260644030664
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.30292803152047115,
+            0.7367719018053127
+          ],
+          "sensor_wins_vs_latest_lab_runs": "16/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.05603933025018647,
+            1.0530892177416005
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7694008307000652,
+            "mape_pct": 92.81782324984458,
+            "rmse_ci95": [
+              0.6012864397186847,
+              0.9169095027671615
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1372317707550992,
+              1.5991256786878663
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.8220670219843652,
+            -0.3941974078771492
+          ],
+          "sensor_wins_vs_latest_lab_runs": "18/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7694008307000652,
+            "mape_pct": 92.81782324984458,
+            "rmse_ci95": [
+              0.5948867787805426,
+              0.918514704228191
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1236079321356014,
+              1.595074022117825
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.6356924445770166,
+            "mape_pct": 48.83686984640339,
+            "rmse_ci95": [
+              0.4797168331174222,
+              0.7865896189785893
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.8066603040540262,
+            -0.39742783145836197
+          ],
+          "sensor_wins_vs_latest_lab_runs": "18/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.07498893675465612,
+            0.34637048734143305
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "9/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.171786847323817,
+            "mape_pct": 76950.34321832351,
+            "rmse_ci95": [
+              0.38277996261452435,
+              1.6481075291329037
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.27843523425131705,
+              0.48973713796402035
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.02089012263396829,
+            1.2635095176041395
+          ],
+          "sensor_wins_vs_latest_lab_runs": "6/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.171786847323817,
+            "mape_pct": 76950.34321832351,
+            "rmse_ci95": [
+              0.36422656672456144,
+              1.6479427744463042
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.28144091557730166,
+              0.48056415422012544
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.27777897362833026,
+              0.48779188499470605
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.022375820424509637,
+            1.2898043525203806
+          ],
+          "sensor_wins_vs_latest_lab_runs": "6/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.0136789798558577,
+            1.270867356016661
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "6/17"
+        }
+      }
+    },
+    "process_all|ridge_clip|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.44602795445059984,
+            "mape_pct": 37.58560132743922,
+            "rmse_ci95": [
+              0.35296001136066707,
+              0.5707625280903892
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.4057702423714497,
+              0.6705287294511698
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.1646088725520979,
+            0.010095114318421654
+          ],
+          "sensor_wins_vs_latest_lab_runs": "14/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.44602795445059984,
+            "mape_pct": 37.58560132743922,
+            "rmse_ci95": [
+              0.35225653841717314,
+              0.5739438453431613
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.4108150604601316,
+              0.6682852904739328
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.38776465427073925,
+            "mape_pct": 24.614619217391702,
+            "rmse_ci95": [
+              0.30680960657910905,
+              0.49232043359598704
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.16411740254284055,
+            0.012502612865131301
+          ],
+          "sensor_wins_vs_latest_lab_runs": "14/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.012126155960982566,
+            0.14635215936053073
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6644693954334885,
+            "mape_pct": 70.19884008466299,
+            "rmse_ci95": [
+              0.5143090867036033,
+              0.7914875399877827
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6787941155819055,
+              1.1231196087230655
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.44844285191778094,
+            -0.019015971170531745
+          ],
+          "sensor_wins_vs_latest_lab_runs": "12/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6644693954334885,
+            "mape_pct": 70.19884008466299,
+            "rmse_ci95": [
+              0.5108688865032064,
+              0.7932842202200968
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6615943817571175,
+              1.1326657070273027
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5890323069421975,
+            "mape_pct": 44.20612038275737,
+            "rmse_ci95": [
+              0.4302392122927362,
+              0.7321612225956076
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.4408174125129282,
+            -0.014998496556781165
+          ],
+          "sensor_wins_vs_latest_lab_runs": "12/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.09823417724843192,
+            0.25609194575830607
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.331583456236174,
+            "mape_pct": 25.620981191652998,
+            "rmse_ci95": [
+              0.2675147571815969,
+              0.43270848569707543
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19230307484231568,
+              0.40423849795440286
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.018563208926682853,
+            0.13172409348555536
+          ],
+          "sensor_wins_vs_latest_lab_runs": "5/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.331583456236174,
+            "mape_pct": 25.620981191652998,
+            "rmse_ci95": [
+              0.2671074921344914,
+              0.4365956019390836
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19321772083171143,
+              0.4237385297831232
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19424667376371432,
+              0.4150634365422508
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.017329781052486625,
+            0.13580693413016487
+          ],
+          "sensor_wins_vs_latest_lab_runs": "5/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.013123428281173126,
+            0.13373332568829963
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "5/17"
+        }
+      }
+    },
+    "process_all|ridge_clip|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.4732673479961182,
+            "mape_pct": 41.27298388842457,
+            "rmse_ci95": [
+              0.3759445630772269,
+              0.6022123969075235
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6229707103474835,
+              0.97962043318629
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.41535351541510945,
+            -0.19977157628175798
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.4732673479961182,
+            "mape_pct": 41.27298388842457,
+            "rmse_ci95": [
+              0.3747486877724669,
+              0.6047720645676026
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.633188648104315,
+              0.9679556787784254
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.45352959635725965,
+            "mape_pct": 31.932443143969675,
+            "rmse_ci95": [
+              0.34841813283514256,
+              0.5788064102956286
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.41274291831845794,
+            -0.2031471356424151
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.08671432767056758,
+            0.14300345282236548
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "9/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6896796041046132,
+            "mape_pct": 75.44302847899183,
+            "rmse_ci95": [
+              0.5218863084247545,
+              0.8240635067644125
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.147398205289016,
+              1.6089964097324663
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.8807055968450433,
+            -0.4862666623809852
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6896796041046132,
+            "mape_pct": 75.44302847899183,
+            "rmse_ci95": [
+              0.5280133557345459,
+              0.8296679460148404
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1266855424925208,
+              1.6019196140989669
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.6356924445770166,
+            "mape_pct": 48.83686984640339,
+            "rmse_ci95": [
+              0.4910087623395626,
+              0.7795710707042189
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.9025308788857571,
+            -0.48222813234102785
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.13354685931868737,
+            0.27216829724908875
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "9/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.3628376387775011,
+            "mape_pct": 28.737227884784513,
+            "rmse_ci95": [
+              0.29500602524719705,
+              0.4732986275654621
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.28088722547183376,
+              0.48606350783997293
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.07913759560533809,
+            0.08089611776706596
+          ],
+          "sensor_wins_vs_latest_lab_runs": "8/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.3628376387775011,
+            "mape_pct": 28.737227884784513,
+            "rmse_ci95": [
+              0.2935336613187746,
+              0.47678258331632484
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.28040454843004325,
+              0.47734856699494366
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.278947609799985,
+              0.49235500445869246
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.07938986238493975,
+            0.0837328665592452
+          ],
+          "sensor_wins_vs_latest_lab_runs": "8/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.08108988169988128,
+            0.08524825938861322
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/17"
+        }
+      }
+    },
+    "process_all|gbr|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.4059154213056581,
+            "mape_pct": 30.692963643987675,
+            "rmse_ci95": [
+              0.31140791655163513,
+              0.535243367445029
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.40816377155440825,
+              0.6642574139866054
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.21500683160375691,
+            -0.01735538886459619
+          ],
+          "sensor_wins_vs_latest_lab_runs": "14/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.4059154213056581,
+            "mape_pct": 30.692963643987675,
+            "rmse_ci95": [
+              0.3123602990424496,
+              0.5183146589686397
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.413562794632551,
+              0.6710329196667876
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.38776465427073925,
+            "mape_pct": 24.614619217391702,
+            "rmse_ci95": [
+              0.304662365201102,
+              0.48863680191494524
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.21238427719864367,
+            -0.016840673940315687
+          ],
+          "sensor_wins_vs_latest_lab_runs": "14/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.056542838455285536,
+            0.11461123846329836
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "9/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6266936972737847,
+            "mape_pct": 57.68936384666205,
+            "rmse_ci95": [
+              0.43687290402919887,
+              0.8067268658490132
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6706280462730929,
+              1.1237426482812816
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.514763095061738,
+            -0.02729168657926006
+          ],
+          "sensor_wins_vs_latest_lab_runs": "15/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6266936972737847,
+            "mape_pct": 57.68936384666205,
+            "rmse_ci95": [
+              0.43827654803805355,
+              0.8117747910016622
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6728637055317032,
+              1.123673504909341
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5890323069421975,
+            "mape_pct": 44.20612038275737,
+            "rmse_ci95": [
+              0.4310549693082238,
+              0.73035017894674
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.5190420197958179,
+            -0.02142732773017368
+          ],
+          "sensor_wins_vs_latest_lab_runs": "15/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.11873871862017947,
+            0.21951178693584444
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "10/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.28483425747452384,
+            "mape_pct": 20.788958835905948,
+            "rmse_ci95": [
+              0.21682279866431034,
+              0.38035394478530865
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.1937218424306962,
+              0.41586831863802937
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.06447668316234503,
+            0.09571661013530872
+          ],
+          "sensor_wins_vs_latest_lab_runs": "9/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.28483425747452384,
+            "mape_pct": 20.788958835905948,
+            "rmse_ci95": [
+              0.21865441873150426,
+              0.3773973980828621
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19197471769899593,
+              0.40468586523131045
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.1948042188643599,
+              0.40786105806785
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.07116238485230024,
+            0.09707500728911467
+          ],
+          "sensor_wins_vs_latest_lab_runs": "9/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.06828185976667728,
+            0.09525945746792809
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "9/17"
+        }
+      }
+    },
+    "process_all|gbr|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.46212803588255263,
+            "mape_pct": 38.79978250649535,
+            "rmse_ci95": [
+              0.3408142302143807,
+              0.6216824624445569
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6249804953859168,
+              0.9565386211194006
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.45719658771090244,
+            -0.1892689485268565
+          ],
+          "sensor_wins_vs_latest_lab_runs": "18/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.46212803588255263,
+            "mape_pct": 38.79978250649535,
+            "rmse_ci95": [
+              0.3408774079308398,
+              0.6236854175377972
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6277680070793344,
+              0.9707672994960946
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.45352959635725965,
+            "mape_pct": 31.932443143969675,
+            "rmse_ci95": [
+              0.34676003506956177,
+              0.582130506193185
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.45867752535552925,
+            -0.18920657020207854
+          ],
+          "sensor_wins_vs_latest_lab_runs": "18/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.09745567567345043,
+            0.15094410074545705
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "11/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7321615736021088,
+            "mape_pct": 79.8116265755892,
+            "rmse_ci95": [
+              0.4748546745495459,
+              0.9759239680212585
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1383660207401727,
+              1.5969379852108758
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.9467894874855056,
+            -0.3586211953033489
+          ],
+          "sensor_wins_vs_latest_lab_runs": "17/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7321615736021088,
+            "mape_pct": 79.8116265755892,
+            "rmse_ci95": [
+              0.46689318451717815,
+              0.9917328694911763
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.130461641183544,
+              1.614041619370848
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.6356924445770166,
+            "mape_pct": 48.83686984640339,
+            "rmse_ci95": [
+              0.48183557540856164,
+              0.777585585026973
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.9447811237848271,
+            -0.34400790724094704
+          ],
+          "sensor_wins_vs_latest_lab_runs": "17/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.12476120510511558,
+            0.36629604316493486
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "11/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.3086249418189214,
+            "mape_pct": 23.754017226709454,
+            "rmse_ci95": [
+              0.2361896724916648,
+              0.40893824265355766
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.27979193907190897,
+              0.48522803049565255
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.16687312734809384,
+            0.04150285957163138
+          ],
+          "sensor_wins_vs_latest_lab_runs": "8/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.3086249418189214,
+            "mape_pct": 23.754017226709454,
+            "rmse_ci95": [
+              0.23821641049945716,
+              0.40758271102499943
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2808604246502492,
+              0.47901697048534564
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2798116484813737,
+              0.4843448037789867
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.16674442298124015,
+            0.03079854834613434
+          ],
+          "sensor_wins_vs_latest_lab_runs": "8/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.16376561542091497,
+            0.03514765025973154
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/17"
+        }
+      }
+    },
+    "process_all+upstream_MI|ridge|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.0944578900945956,
+            "mape_pct": 305114.96695047955,
+            "rmse_ci95": [
+              0.45648161078971866,
+              1.5842076432842451
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.4146453190364166,
+              0.6633700577970928
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.08878059394836164,
+            1.1073686965064697
+          ],
+          "sensor_wins_vs_latest_lab_runs": "10/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.0944578900945956,
+            "mape_pct": 305114.96695047955,
+            "rmse_ci95": [
+              0.46686668925201275,
+              1.5837250269323995
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.41254771645161414,
+              0.6703515008575774
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.38776465427073925,
+            "mape_pct": 24.614619217391702,
+            "rmse_ci95": [
+              0.3042634903414947,
+              0.4858105815054396
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.09854345903007819,
+            1.0815561528151314
+          ],
+          "sensor_wins_vs_latest_lab_runs": "10/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.0704105279365977,
+            1.2154708514359975
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7060003858870447,
+            "mape_pct": 76.31774137030659,
+            "rmse_ci95": [
+              0.5516023442356195,
+              0.8314414551321503
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6687777408655051,
+              1.138468834124973
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.4198993155428334,
+            0.05540848310552744
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7060003858870447,
+            "mape_pct": 76.31774137030659,
+            "rmse_ci95": [
+              0.5623490046418462,
+              0.837878141906802
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.658558485660349,
+              1.1260942145931014
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5890323069421975,
+            "mape_pct": 44.20612038275737,
+            "rmse_ci95": [
+              0.4277440314409478,
+              0.7272603214472713
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.42626343808411515,
+            0.03909077667253908
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.05091074863109842,
+            0.283558700507614
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.205994713611761,
+            "mape_pct": 417022.6370745315,
+            "rmse_ci95": [
+              0.34463935459794465,
+              1.7558671196761602
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19575656237254987,
+              0.41200267759478826
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.052016484878933955,
+            1.4975731068337168
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.205994713611761,
+            "mape_pct": 417022.6370745315,
+            "rmse_ci95": [
+              0.3396263876929365,
+              1.7612628905013414
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.1932562932344583,
+              0.4049978987873492
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19476911484946363,
+              0.41269963265067
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.05416190724820701,
+            1.4633947902143305
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.05030964666253824,
+            1.4699746187269507
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "3/17"
+        }
+      }
+    },
+    "process_all+upstream_MI|ridge|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.1568768614098277,
+            "mape_pct": 600653.4620254777,
+            "rmse_ci95": [
+              0.49926261637741914,
+              1.6374927067346319
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6220351781341056,
+              0.9650084261739614
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.2909078368778839,
+            0.9331375356108845
+          ],
+          "sensor_wins_vs_latest_lab_runs": "15/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 1.1568768614098277,
+            "mape_pct": 600653.4620254777,
+            "rmse_ci95": [
+              0.5056384224918468,
+              1.6398966083029547
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6266215012709782,
+              0.9640775399763423
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.45352959635725965,
+            "mape_pct": 31.932443143969675,
+            "rmse_ci95": [
+              0.34763050877671636,
+              0.5749157391485467
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.28892924333032105,
+            0.9295168131358824
+          ],
+          "sensor_wins_vs_latest_lab_runs": "15/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.07053845215172616,
+            1.2327254470048497
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "9/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7842682114350495,
+            "mape_pct": 98.13426182437446,
+            "rmse_ci95": [
+              0.597059269796818,
+              0.9511818498717103
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1163688856771106,
+              1.6188030480644902
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.8338998122314999,
+            -0.34245825880024267
+          ],
+          "sensor_wins_vs_latest_lab_runs": "18/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.7842682114350495,
+            "mape_pct": 98.13426182437446,
+            "rmse_ci95": [
+              0.5866015648156453,
+              0.9565095271386251
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1268372843719847,
+              1.6016590490381746
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.6356924445770166,
+            "mape_pct": 48.83686984640339,
+            "rmse_ci95": [
+              0.48100967986845233,
+              0.7817445647148266
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.8395064736996821,
+            -0.3276438404287977
+          ],
+          "sensor_wins_vs_latest_lab_runs": "18/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.06707758967779964,
+            0.3751606368771108
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "10/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.2663775618709663,
+            "mape_pct": 820975.5349328534,
+            "rmse_ci95": [
+              0.38123352440708075,
+              1.8390738340099795
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2775069495964189,
+              0.4855793713901678
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.019691377720917582,
+            1.4766187504246533
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 1.2663775618709663,
+            "mape_pct": 820975.5349328534,
+            "rmse_ci95": [
+              0.3785714063922899,
+              1.8289365145995669
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2770542554578746,
+              0.49034419506131727
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2780206022223619,
+              0.4833136309246158
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.012092364910806208,
+            1.50475955951278
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.012805349014879865,
+            1.4964413052829062
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/17"
+        }
+      }
+    },
+    "process_all+upstream_MI|ridge_clip|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.4353903630141319,
+            "mape_pct": 35.77723888768501,
+            "rmse_ci95": [
+              0.3513447510269571,
+              0.544497454277253
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.41827888796611035,
+              0.6700262760497435
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.1729284312947559,
+            -0.0003100769006800614
+          ],
+          "sensor_wins_vs_latest_lab_runs": "12/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.4353903630141319,
+            "mape_pct": 35.77723888768501,
+            "rmse_ci95": [
+              0.3500206739405028,
+              0.5416184792535976
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5263328522451545,
+            "mape_pct": 37.90752374041901,
+            "rmse_ci95": [
+              0.4115278570214065,
+              0.6701670031036364
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.38776465427073925,
+            "mape_pct": 24.614619217391702,
+            "rmse_ci95": [
+              0.3014238609013684,
+              0.4915335670520415
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.17535219629462884,
+            -0.002732592346279973
+          ],
+          "sensor_wins_vs_latest_lab_runs": "12/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.021225755776907503,
+            0.1261162790034417
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6109408523183927,
+            "mape_pct": 58.323781597114234,
+            "rmse_ci95": [
+              0.475704424863015,
+              0.7391345051918229
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.6673795124038068,
+              1.1123536954158422
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.48119956418414206,
+            -0.0675248034255984
+          ],
+          "sensor_wins_vs_latest_lab_runs": "12/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6109408523183927,
+            "mape_pct": 58.323781597114234,
+            "rmse_ci95": [
+              0.4684020545240209,
+              0.7367196721137274
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.90492416948818,
+            "mape_pct": 93.73290981532689,
+            "rmse_ci95": [
+              0.665670936558373,
+              1.1308375730660585
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5890323069421975,
+            "mape_pct": 44.20612038275737,
+            "rmse_ci95": [
+              0.4320411527586771,
+              0.7403464769443295
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.508514044034159,
+            -0.06896883950587708
+          ],
+          "sensor_wins_vs_latest_lab_runs": "12/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.13389764138458016,
+            0.17955512679070795
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.34953934608106807,
+            "mape_pct": 27.505726177716884,
+            "rmse_ci95": [
+              0.2848617590276648,
+              0.45652359126321357
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19323118195719002,
+              0.41812622622711076
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.003959508607157426,
+            0.15992612860223648
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.34953934608106807,
+            "mape_pct": 27.505726177716884,
+            "rmse_ci95": [
+              0.2829172934342781,
+              0.45139659389666814
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19447290622000468,
+              0.40892141781468533
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2797085129640635,
+            "mape_pct": 17.427204588677665,
+            "rmse_ci95": [
+              0.19470680940556506,
+              0.4178565578943853
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.004484099028600252,
+            0.16252037071412492
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.0014244634877446608,
+            0.16114693464251675
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "3/17"
+        }
+      }
+    },
+    "process_all+upstream_MI|ridge_clip|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.4801577786288115,
+            "mape_pct": 42.01152338345192,
+            "rmse_ci95": [
+              0.37425815810237134,
+              0.614857350900071
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6347270101563458,
+              0.9693644267543305
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.41775928026214126,
+            -0.18057163713021634
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/22"
+        },
+        "same_grade_defined": {
+          "n": 231,
+          "n_runs": 22,
+          "sensor": {
+            "rmse_log": 0.4801577786288115,
+            "mape_pct": 42.01152338345192,
+            "rmse_ci95": [
+              0.3784408368025997,
+              0.608394528355934
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.7785501941546767,
+            "mape_pct": 68.61003348209604,
+            "rmse_ci95": [
+              0.6260847094487436,
+              0.9728659189225801
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.45352959635725965,
+            "mape_pct": 31.932443143969675,
+            "rmse_ci95": [
+              0.3453654181223391,
+              0.5785708572499095
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.4190722362552378,
+            -0.17970714744152047
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/22",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.07460408889522271,
+            0.14563135040128924
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "10/22"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6644071976005315,
+            "mape_pct": 68.38607688971409,
+            "rmse_ci95": [
+              0.5049622422468965,
+              0.8015477930966592
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.117631289088947,
+              1.610451372248654
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.9092382530384178,
+            -0.49489525105265164
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/21"
+        },
+        "same_grade_defined": {
+          "n": 62,
+          "n_runs": 21,
+          "sensor": {
+            "rmse_log": 0.6644071976005315,
+            "mape_pct": 68.38607688971409,
+            "rmse_ci95": [
+              0.4958269585615409,
+              0.8048996869697173
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.376992722791108,
+            "mape_pct": 185.49047255780974,
+            "rmse_ci95": [
+              1.1300566765867883,
+              1.6061829684972462
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.6356924445770166,
+            "mape_pct": 48.83686984640339,
+            "rmse_ci95": [
+              0.4818026782128797,
+              0.7817340496880948
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.907536898450468,
+            -0.5098462228064209
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/21",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.14889157060876645,
+            0.20778528919957046
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "10/21"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.3913888594155711,
+            "mape_pct": 32.33565168292971,
+            "rmse_ci95": [
+              0.307548095868652,
+              0.5314900209397941
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.27718499012178405,
+              0.4802195572263105
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.06720143707404032,
+            0.13723799190586786
+          ],
+          "sensor_wins_vs_latest_lab_runs": "8/17"
+        },
+        "same_grade_defined": {
+          "n": 169,
+          "n_runs": 17,
+          "sensor": {
+            "rmse_log": 0.3913888594155711,
+            "mape_pct": 32.33565168292971,
+            "rmse_ci95": [
+              0.3062752634940996,
+              0.5407057751724713
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.2773311678509611,
+              0.4856940789189451
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.3645510985084179,
+            "mape_pct": 25.73081914662713,
+            "rmse_ci95": [
+              0.27818951963434335,
+              0.48523149841871727
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.06848230052702106,
+            0.13744033500019603
+          ],
+          "sensor_wins_vs_latest_lab_runs": "8/17",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            -0.07264022505859645,
+            0.13593868183127603
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/17"
+        }
+      }
+    }
+  },
+  "grade_held_out": {
+    "process_r3|ridge|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 327,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 21.55016595775418,
+            "mape_pct": 1.31622834396841e+52,
+            "rmse_ci95": [
+              1.247805377916631,
+              34.4046836578298
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5586628732050338,
+            "mape_pct": 42.7436043205999,
+            "rmse_ci95": [
+              0.4682240749261521,
+              0.6666459148433731
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6573081347747461,
+            33.493794936517276
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/38"
+        },
+        "same_grade_defined": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 21.616231653460382,
+            "mape_pct": 1.3243282107005235e+52,
+            "rmse_ci95": [
+              1.2718982049971037,
+              34.23260851438128
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5600780087120059,
+            "mape_pct": 42.88831209826738,
+            "rmse_ci95": [
+              0.4704043787277987,
+              0.6671488669544967
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.41152640452076006,
+            "mape_pct": 27.26658554425116,
+            "rmse_ci95": [
+              0.3453297780231789,
+              0.48439161186697716
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.679347710829679,
+            33.740775475263824
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.8138567763681133,
+            33.432036473667736
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "0/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 110,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.434836161210297,
+            "mape_pct": 299.5440964422672,
+            "rmse_ci95": [
+              1.1896483839104797,
+              1.6812023558218687
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8732531486607341,
+            "mape_pct": 90.35809231907015,
+            "rmse_ci95": [
+              0.72201789268245,
+              1.0136808099745505
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.3395943922293136,
+            0.7805811380866519
+          ],
+          "sensor_wins_vs_latest_lab_runs": "6/38"
+        },
+        "same_grade_defined": {
+          "n": 108,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.4417215868177606,
+            "mape_pct": 301.945334762718,
+            "rmse_ci95": [
+              1.1960672476906309,
+              1.6721177198119972
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8807253881161351,
+            "mape_pct": 91.67530531665228,
+            "rmse_ci95": [
+              0.727590909939909,
+              1.0244827397585996
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5842436189470571,
+            "mape_pct": 44.66548003836274,
+            "rmse_ci95": [
+              0.475811795580814,
+              0.6816715324290753
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.3398387236221244,
+            0.7766005272589082
+          ],
+          "sensor_wins_vs_latest_lab_runs": "6/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6256524859779048,
+            1.063945165815495
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "4/38"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 26.43446757085628,
+            "mape_pct": 1.983440868560692e+52,
+            "rmse_ci95": [
+              1.0926474899312897,
+              40.97175338205436
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21084039511610395,
+              0.3857123943984381
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.7660352340528036,
+            40.31285121976656
+          ],
+          "sensor_wins_vs_latest_lab_runs": "1/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 26.43446757085628,
+            "mape_pct": 1.983440868560692e+52,
+            "rmse_ci95": [
+              1.108547577999662,
+              40.716522299701595
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.2124074804725111,
+              0.40032590586352784
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21428775921303264,
+              0.3915434333479955
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.7953053049784938,
+            40.3490302619746
+          ],
+          "sensor_wins_vs_latest_lab_runs": "1/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.7780107298044282,
+            40.62131141285064
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "1/29"
+        }
+      }
+    },
+    "process_r3|ridge|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 21.616217794719493,
+            "mape_pct": 1.3243282107005235e+52,
+            "rmse_ci95": [
+              1.265444401374169,
+              34.24984994243421
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.815920588823224,
+            "mape_pct": 78.45661464467146,
+            "rmse_ci95": [
+              0.6887658181810113,
+              0.9743136324581915
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.4188544660785637,
+            33.453570100246786
+          ],
+          "sensor_wins_vs_latest_lab_runs": "5/38"
+        },
+        "same_grade_defined": {
+          "n": 319,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 21.818188780034042,
+            "mape_pct": 1.349237205259154e+52,
+            "rmse_ci95": [
+              1.2832617410646308,
+              34.478954525360805
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8185350220233051,
+            "mape_pct": 78.67964930632616,
+            "rmse_ci95": [
+              0.6879904410246648,
+              0.9790237687435335
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.48311563178625994,
+            "mape_pct": 35.17480805974459,
+            "rmse_ci95": [
+              0.3953104656085579,
+              0.5767093836547603
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.44358261485768996,
+            33.739082063473795
+          ],
+          "sensor_wins_vs_latest_lab_runs": "5/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.8032876603754997,
+            33.814660056971725
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "1/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 108,
+          "n_runs": 37,
+          "sensor": {
+            "rmse_log": 1.4410961606677262,
+            "mape_pct": 303.89235249449086,
+            "rmse_ci95": [
+              1.1992584812220257,
+              1.6786677755301471
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.2836835231193886,
+            "mape_pct": 174.88949374779943,
+            "rmse_ci95": [
+              1.1199814540584874,
+              1.4536509391722172
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.08186521128286164,
+            0.39975609395429085
+          ],
+          "sensor_wins_vs_latest_lab_runs": "14/37"
+        },
+        "same_grade_defined": {
+          "n": 102,
+          "n_runs": 35,
+          "sensor": {
+            "rmse_log": 1.4657826818580049,
+            "mape_pct": 312.84169388911977,
+            "rmse_ci95": [
+              1.209688777251091,
+              1.7149693004207338
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.3110984402349213,
+            "mape_pct": 181.25954601923684,
+            "rmse_ci95": [
+              1.1376371120454563,
+              1.4838572686391347
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5945902457470924,
+            "mape_pct": 45.20028761081026,
+            "rmse_ci95": [
+              0.4823646397478797,
+              0.6989822862916684
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.10499731608444128,
+            0.4254245324115144
+          ],
+          "sensor_wins_vs_latest_lab_runs": "14/35",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.5984027431437314,
+            1.1242498570329176
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "6/35"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 26.43446757085628,
+            "mape_pct": 1.983440868560692e+52,
+            "rmse_ci95": [
+              1.0937595986436264,
+              40.95357106105519
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3376097664770375,
+              0.5335204089391026
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6534653801863753,
+            40.16536528542933
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 26.43446757085628,
+            "mape_pct": 1.983440868560692e+52,
+            "rmse_ci95": [
+              1.1303311943163656,
+              40.86760880594397
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3337960168939853,
+              0.5351483755677756
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3352785711378119,
+              0.5397363187068094
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6282451205590651,
+            40.70449674656289
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6542263224097598,
+            41.02243406082327
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "2/29"
+        }
+      }
+    },
+    "process_r3|ridge_clip|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 327,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.56808445358521,
+            "mape_pct": 810.028023473734,
+            "rmse_ci95": [
+              1.191762346893639,
+              1.9208634284671677
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5586628732050338,
+            "mape_pct": 42.7436043205999,
+            "rmse_ci95": [
+              0.4675609471877303,
+              0.6684933592606385
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6085173909010709,
+            1.4372189686693853
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/38"
+        },
+        "same_grade_defined": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.5712169171886707,
+            "mape_pct": 814.1093687947458,
+            "rmse_ci95": [
+              1.2085873715069462,
+              1.935474930740409
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5600780087120059,
+            "mape_pct": 42.88831209826738,
+            "rmse_ci95": [
+              0.46829299601899327,
+              0.6657106099465101
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.41152640452076006,
+            "mape_pct": 27.26658554425116,
+            "rmse_ci95": [
+              0.34543945042796703,
+              0.48957688768283886
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6067171640762373,
+            1.4132072746135962
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.7808742055442671,
+            1.5516663601895244
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "1/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 110,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.394212196903072,
+            "mape_pct": 217.36698923690187,
+            "rmse_ci95": [
+              1.2089777681834568,
+              1.586746938907675
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8732531486607341,
+            "mape_pct": 90.35809231907015,
+            "rmse_ci95": [
+              0.7214677782761048,
+              1.0276654828738154
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.31062245020924284,
+            0.7090580416838025
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/38"
+        },
+        "same_grade_defined": {
+          "n": 108,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.4013856623445626,
+            "mape_pct": 218.67361109667215,
+            "rmse_ci95": [
+              1.2124942362970579,
+              1.580574427149371
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8807253881161351,
+            "mape_pct": 91.67530531665228,
+            "rmse_ci95": [
+              0.7315807880071106,
+              1.0245786538191122
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5842436189470571,
+            "mape_pct": 44.66548003836274,
+            "rmse_ci95": [
+              0.4821798259436155,
+              0.6799925556791778
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.3134999489519354,
+            0.7154434027468809
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.594072756446605,
+            1.0035502077989547
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "3/38"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 1.6492361220477596,
+            "mape_pct": 1110.4552758518516,
+            "rmse_ci95": [
+              1.1024644565703068,
+              2.1061813366445468
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.2162722255989673,
+              0.3975522779725512
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.7917159354844882,
+            1.8621308593273878
+          ],
+          "sensor_wins_vs_latest_lab_runs": "0/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 1.6492361220477596,
+            "mape_pct": 1110.4552758518516,
+            "rmse_ci95": [
+              1.0951894622777882,
+              2.118074190339479
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21458501741941158,
+              0.3952846485917052
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21423591380860807,
+              0.3935601550293955
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.7914065666606697,
+            1.8321807772931502
+          ],
+          "sensor_wins_vs_latest_lab_runs": "0/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.7833638858804199,
+            1.8580701747502257
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "0/29"
+        }
+      }
+    },
+    "process_r3|ridge_clip|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.5669568246496846,
+            "mape_pct": 814.5061568165453,
+            "rmse_ci95": [
+              1.2032078019709325,
+              1.9153685323327112
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.815920588823224,
+            "mape_pct": 78.45661464467146,
+            "rmse_ci95": [
+              0.6898239960364803,
+              0.9643150037118174
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.33280767893180996,
+            1.16133575763006
+          ],
+          "sensor_wins_vs_latest_lab_runs": "6/38"
+        },
+        "same_grade_defined": {
+          "n": 319,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.576909617813995,
+            "mape_pct": 827.1717175089015,
+            "rmse_ci95": [
+              1.2021626813333333,
+              1.9691165195484637
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8185350220233051,
+            "mape_pct": 78.67964930632616,
+            "rmse_ci95": [
+              0.6839607240985136,
+              0.9777046741556153
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.48311563178625994,
+            "mape_pct": 35.17480805974459,
+            "rmse_ci95": [
+              0.3905529113315367,
+              0.5836975944531706
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.3382720568408085,
+            1.2003524309345492
+          ],
+          "sensor_wins_vs_latest_lab_runs": "6/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.7033692053059682,
+            1.4986642782368937
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "2/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 108,
+          "n_runs": 37,
+          "sensor": {
+            "rmse_log": 1.386957554067617,
+            "mape_pct": 219.86764912523518,
+            "rmse_ci95": [
+              1.1992275352678912,
+              1.574339259391484
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.2836835231193886,
+            "mape_pct": 174.88949374779943,
+            "rmse_ci95": [
+              1.108747345423493,
+              1.4564542253676593
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.11523801366294187,
+            0.31349852648743154
+          ],
+          "sensor_wins_vs_latest_lab_runs": "16/37"
+        },
+        "same_grade_defined": {
+          "n": 102,
+          "n_runs": 35,
+          "sensor": {
+            "rmse_log": 1.4107563126607765,
+            "mape_pct": 224.4998335832131,
+            "rmse_ci95": [
+              1.2122517255386283,
+              1.6019105319561835
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.3110984402349213,
+            "mape_pct": 181.25954601923684,
+            "rmse_ci95": [
+              1.1389528476310289,
+              1.4741028973901296
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5945902457470924,
+            "mape_pct": 45.20028761081026,
+            "rmse_ci95": [
+              0.4820775603521491,
+              0.6986725110345195
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.12753131444740187,
+            0.31568312490857564
+          ],
+          "sensor_wins_vs_latest_lab_runs": "16/35",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.5867823908540512,
+            1.0322950442449301
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "5/35"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 1.6492361220477596,
+            "mape_pct": 1110.4552758518516,
+            "rmse_ci95": [
+              1.095907045508972,
+              2.1153918521335036
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.33335433605097803,
+              0.544401688468879
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6202040965459568,
+            1.7424475366313747
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 1.6492361220477596,
+            "mape_pct": 1110.4552758518516,
+            "rmse_ci95": [
+              1.0962184006870968,
+              2.1288011753064775
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3330905736261434,
+              0.5391476511063582
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3323838792367479,
+              0.5366185686006761
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6367880402563643,
+            1.7296939715489899
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6313545029781935,
+            1.7478623765980685
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "2/29"
+        }
+      }
+    },
+    "process_all|ridge|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 327,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 2.0459685172388458,
+            "mape_pct": 1140621.3561336068,
+            "rmse_ci95": [
+              1.1839162831219452,
+              2.7076117889657874
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5586628732050338,
+            "mape_pct": 42.7436043205999,
+            "rmse_ci95": [
+              0.4709761804996912,
+              0.6651353737492032
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6317734483837512,
+            2.2558023906541504
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/38"
+        },
+        "same_grade_defined": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 2.051550026282768,
+            "mape_pct": 1147639.9825800136,
+            "rmse_ci95": [
+              1.2167864068291763,
+              2.803904809327565
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5600780087120059,
+            "mape_pct": 42.88831209826738,
+            "rmse_ci95": [
+              0.4651317591084392,
+              0.6661298591779666
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.41152640452076006,
+            "mape_pct": 27.26658554425116,
+            "rmse_ci95": [
+              0.34377761309712623,
+              0.49104752964365106
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6308347296484194,
+            2.2293512907508832
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.777143789121634,
+            2.3616397355212717
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "3/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 110,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.6917836197629845,
+            "mape_pct": 903.212732500171,
+            "rmse_ci95": [
+              1.2335274152328288,
+              2.1442003000262937
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8732531486607341,
+            "mape_pct": 90.35809231907015,
+            "rmse_ci95": [
+              0.721130143142921,
+              1.0192008586039742
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.3705064612915831,
+            1.2886592488853108
+          ],
+          "sensor_wins_vs_latest_lab_runs": "9/38"
+        },
+        "same_grade_defined": {
+          "n": 108,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.7048280702019896,
+            "mape_pct": 918.1878091667118,
+            "rmse_ci95": [
+              1.238816447747082,
+              2.1528416149042338
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8807253881161351,
+            "mape_pct": 91.67530531665228,
+            "rmse_ci95": [
+              0.7319068365192535,
+              1.0380084642675913
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5842436189470571,
+            "mape_pct": 44.66548003836274,
+            "rmse_ci95": [
+              0.47864638610435384,
+              0.6855196436198039
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.3836710364139855,
+            1.2745797685911167
+          ],
+          "sensor_wins_vs_latest_lab_runs": "10/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.664092732878085,
+            1.56374007833437
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "6/38"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 2.2038752065733944,
+            "mape_pct": 1718358.663848453,
+            "rmse_ci95": [
+              1.0252001445864105,
+              3.0988666766169986
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21488838377626496,
+              0.3934698508585707
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.7311638516219443,
+            2.821147548483767
+          ],
+          "sensor_wins_vs_latest_lab_runs": "1/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 2.2038752065733944,
+            "mape_pct": 1718358.663848453,
+            "rmse_ci95": [
+              1.0660487402880374,
+              3.1051275346318663
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21276484849350213,
+              0.3874998615993404
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21495470207260559,
+              0.3895003565326805
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.724149068473362,
+            2.7900828630383336
+          ],
+          "sensor_wins_vs_latest_lab_runs": "1/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.7726950857477878,
+            2.8331672946334265
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "1/29"
+        }
+      }
+    },
+    "process_all|ridge|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 2.0502959036227586,
+            "mape_pct": 1147640.1458131443,
+            "rmse_ci95": [
+              1.1785564385089773,
+              2.8071130682104077
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.815920588823224,
+            "mape_pct": 78.45661464467146,
+            "rmse_ci95": [
+              0.6869115055765939,
+              0.9551980670838662
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.33677943632560053,
+            2.0126726443596494
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/38"
+        },
+        "same_grade_defined": {
+          "n": 319,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 2.067903879151946,
+            "mape_pct": 1169224.459479805,
+            "rmse_ci95": [
+              1.204866573938432,
+              2.785358596762603
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8185350220233051,
+            "mape_pct": 78.67964930632616,
+            "rmse_ci95": [
+              0.6962975572058869,
+              0.9799136048578557
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.48311563178625994,
+            "mape_pct": 35.17480805974459,
+            "rmse_ci95": [
+              0.3915840413752118,
+              0.5895126983980475
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.34826927533759333,
+            2.0215630655101653
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.7008068692655233,
+            2.31673734832741
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "5/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 108,
+          "n_runs": 37,
+          "sensor": {
+            "rmse_log": 1.7002818776648372,
+            "mape_pct": 918.6790199763617,
+            "rmse_ci95": [
+              1.2529806635304612,
+              2.1713442573828594
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.2836835231193886,
+            "mape_pct": 174.88949374779943,
+            "rmse_ci95": [
+              1.1165395124439401,
+              1.4444314028977212
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.039622505978678745,
+            0.8838261342873336
+          ],
+          "sensor_wins_vs_latest_lab_runs": "16/37"
+        },
+        "same_grade_defined": {
+          "n": 102,
+          "n_runs": 35,
+          "sensor": {
+            "rmse_log": 1.7437083895211176,
+            "mape_pct": 968.3580288566419,
+            "rmse_ci95": [
+              1.2861364342318642,
+              2.2321967809139838
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.3110984402349213,
+            "mape_pct": 181.25954601923684,
+            "rmse_ci95": [
+              1.1349946906795687,
+              1.4747693075053425
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5945902457470924,
+            "mape_pct": 45.20028761081026,
+            "rmse_ci95": [
+              0.48393892789777193,
+              0.7026055882692311
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.04184466326601342,
+            0.9345100809702859
+          ],
+          "sensor_wins_vs_latest_lab_runs": "15/35",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6631173809928147,
+            1.6503028703402123
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/35"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 2.2038752065733944,
+            "mape_pct": 1718358.663848453,
+            "rmse_ci95": [
+              1.05314967331361,
+              3.1130809740392045
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3344457677818586,
+              0.5370330062591909
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.584630931841174,
+            2.7265174992692223
+          ],
+          "sensor_wins_vs_latest_lab_runs": "4/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 2.2038752065733944,
+            "mape_pct": 1718358.663848453,
+            "rmse_ci95": [
+              1.0636423529967172,
+              3.0953349996765143
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.33448855760886426,
+              0.5367325555007103
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3324144845324984,
+              0.5350159773078427
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6358459574064339,
+            2.729125753646902
+          ],
+          "sensor_wins_vs_latest_lab_runs": "4/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6232388895036916,
+            2.743434925268988
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "4/29"
+        }
+      }
+    },
+    "process_all|ridge_clip|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 327,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 0.9915503659991382,
+            "mape_pct": 112.79502257008957,
+            "rmse_ci95": [
+              0.8015350969750662,
+              1.2280923381132876
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5586628732050338,
+            "mape_pct": 42.7436043205999,
+            "rmse_ci95": [
+              0.4692401151986107,
+              0.6658132021644189
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.2805490516290328,
+            0.6117507108572823
+          ],
+          "sensor_wins_vs_latest_lab_runs": "8/38"
+        },
+        "same_grade_defined": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 0.9941772604260958,
+            "mape_pct": 113.22318130656112,
+            "rmse_ci95": [
+              0.8079777875236223,
+              1.212445924737774
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5600780087120059,
+            "mape_pct": 42.88831209826738,
+            "rmse_ci95": [
+              0.4676694674555731,
+              0.669546671890265
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.41152640452076006,
+            "mape_pct": 27.26658554425116,
+            "rmse_ci95": [
+              0.3455234853370135,
+              0.49227095126487186
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.2766732315347931,
+            0.6174506043867578
+          ],
+          "sensor_wins_vs_latest_lab_runs": "8/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.4123444422164753,
+            0.7682939880689743
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "3/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 110,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.2881012531791574,
+            "mape_pct": 193.68497980233929,
+            "rmse_ci95": [
+              1.1041879224015985,
+              1.4668256813311815
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8732531486607341,
+            "mape_pct": 90.35809231907015,
+            "rmse_ci95": [
+              0.7190031620998613,
+              1.0212336222283167
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.21292128081674158,
+            0.6085392162007951
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/38"
+        },
+        "same_grade_defined": {
+          "n": 108,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.2990077568105842,
+            "mape_pct": 196.4713826154666,
+            "rmse_ci95": [
+              1.1182931625522288,
+              1.4759339552143447
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8807253881161351,
+            "mape_pct": 91.67530531665228,
+            "rmse_ci95": [
+              0.7306932703072305,
+              1.0339855772149422
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5842436189470571,
+            "mape_pct": 44.66548003836274,
+            "rmse_ci95": [
+              0.4669484194230489,
+              0.6836224726042842
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.22518576474895743,
+            0.6196157003626991
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.49551080304420086,
+            0.9126710205162799
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "6/38"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 0.8003016531795318,
+            "mape_pct": 71.79089678415652,
+            "rmse_ci95": [
+              0.6147438002592494,
+              1.042915865390756
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21330977179411623,
+              0.38948688530389125
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.33341485719167435,
+            0.7388367675069868
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 0.8003016531795318,
+            "mape_pct": 71.79089678415652,
+            "rmse_ci95": [
+              0.6126993311665991,
+              1.0507970282941874
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21285219443910458,
+              0.3884858352496648
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21385790427416676,
+              0.38322495982192023
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.32876677385017034,
+            0.7204877011780798
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.3308534451861696,
+            0.7325105021651434
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "2/29"
+        }
+      }
+    },
+    "process_all|ridge_clip|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 0.9900586553424987,
+            "mape_pct": 113.06005856444298,
+            "rmse_ci95": [
+              0.8070877102798258,
+              1.2127755650414704
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.815920588823224,
+            "mape_pct": 78.45661464467146,
+            "rmse_ci95": [
+              0.6870009049417659,
+              0.962222958596457
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.035644321873498835,
+            0.3224639909544445
+          ],
+          "sensor_wins_vs_latest_lab_runs": "14/38"
+        },
+        "same_grade_defined": {
+          "n": 319,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 0.9976087387685822,
+            "mape_pct": 114.36740153880113,
+            "rmse_ci95": [
+              0.8055442171290889,
+              1.2313722961711884
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8185350220233051,
+            "mape_pct": 78.67964930632616,
+            "rmse_ci95": [
+              0.6931145600808553,
+              0.9754487480870783
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.48311563178625994,
+            "mape_pct": 35.17480805974459,
+            "rmse_ci95": [
+              0.3903095851614383,
+              0.5827555616847264
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.025323476065282454,
+            0.3442124468397038
+          ],
+          "sensor_wins_vs_latest_lab_runs": "14/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.34542455457835175,
+            0.6940547552623956
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "6/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 108,
+          "n_runs": 37,
+          "sensor": {
+            "rmse_log": 1.2895071269936227,
+            "mape_pct": 195.9805039933519,
+            "rmse_ci95": [
+              1.094263915413089,
+              1.4677446496404076
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.2836835231193886,
+            "mape_pct": 174.88949374779943,
+            "rmse_ci95": [
+              1.1140796117003293,
+              1.4492672745312605
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.195253129201597,
+            0.21962945115984958
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/37"
+        },
+        "same_grade_defined": {
+          "n": 102,
+          "n_runs": 35,
+          "sensor": {
+            "rmse_log": 1.3228439568586627,
+            "mape_pct": 204.94682832074113,
+            "rmse_ci95": [
+              1.1246117989145306,
+              1.501767261798767
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.3110984402349213,
+            "mape_pct": 181.25954601923684,
+            "rmse_ci95": [
+              1.1323695131589349,
+              1.4754089370168537
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5945902457470924,
+            "mape_pct": 45.20028761081026,
+            "rmse_ci95": [
+              0.4831324839360978,
+              0.7009043965683098
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.19952756320842185,
+            0.2266806149423631
+          ],
+          "sensor_wins_vs_latest_lab_runs": "18/35",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.5037198375576925,
+            0.9286124875041991
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/35"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 0.8003016531795318,
+            "mape_pct": 71.79089678415652,
+            "rmse_ci95": [
+              0.6103242489934408,
+              1.0500668863587226
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.33178010792292645,
+              0.5332569405862518
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.21286182876381934,
+            0.5640588176235078
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 0.8003016531795318,
+            "mape_pct": 71.79089678415652,
+            "rmse_ci95": [
+              0.6114326750806083,
+              1.042084741309269
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.33098163432482974,
+              0.5385634494932102
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.33052824478913867,
+              0.5403514915710086
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.21929453692290896,
+            0.5644508829756422
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.2165679978604993,
+            0.5629023035363288
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/29"
+        }
+      }
+    },
+    "process_all|gbr|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 327,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.2375576159980644,
+            "mape_pct": 162.0284577369815,
+            "rmse_ci95": [
+              1.0681290696169274,
+              1.4403808187056697
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5586628732050338,
+            "mape_pct": 42.7436043205999,
+            "rmse_ci95": [
+              0.4702742117137052,
+              0.6682999503721969
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.536841958121986,
+            0.8371712697966277
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/38"
+        },
+        "same_grade_defined": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.2411648644587912,
+            "mape_pct": 162.91503945226256,
+            "rmse_ci95": [
+              1.06009093492264,
+              1.45234259898994
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5600780087120059,
+            "mape_pct": 42.88831209826738,
+            "rmse_ci95": [
+              0.46552121502371807,
+              0.6775648262897757
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.41152640452076006,
+            "mape_pct": 27.26658554425116,
+            "rmse_ci95": [
+              0.3430147725996245,
+              0.4899532123060641
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.5331660216031635,
+            0.8320173979848039
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6778283665945231,
+            0.9963442523818494
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "2/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 110,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.492984693553383,
+            "mape_pct": 261.42746422292333,
+            "rmse_ci95": [
+              1.2868835885203729,
+              1.6802407966151354
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8732531486607341,
+            "mape_pct": 90.35809231907015,
+            "rmse_ci95": [
+              0.7325378638950865,
+              1.015962392821783
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.45039575075310134,
+            0.8001233427467402
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/38"
+        },
+        "same_grade_defined": {
+          "n": 108,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.5062622654071078,
+            "mape_pct": 265.93614080105505,
+            "rmse_ci95": [
+              1.3196092663087833,
+              1.6758181741478975
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8807253881161351,
+            "mape_pct": 91.67530531665228,
+            "rmse_ci95": [
+              0.7255993566684754,
+              1.0284688399212134
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5842436189470571,
+            "mape_pct": 44.66548003836274,
+            "rmse_ci95": [
+              0.4718282125033925,
+              0.6833453960290573
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.4524312191063465,
+            0.8086449239604016
+          ],
+          "sensor_wins_vs_latest_lab_runs": "3/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.7381156578580339,
+            1.0951065008396699
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "3/38"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 1.0853573227852802,
+            "mape_pct": 111.64186458742573,
+            "rmse_ci95": [
+              0.8995801353379245,
+              1.3099529346607977
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21715286373547316,
+              0.39493299217366096
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6228284440182074,
+            1.004227118423175
+          ],
+          "sensor_wins_vs_latest_lab_runs": "0/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 1.0853573227852802,
+            "mape_pct": 111.64186458742573,
+            "rmse_ci95": [
+              0.900461014681469,
+              1.3010884863905503
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21387000909084594,
+              0.3983672724301224
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21448657604343296,
+              0.3901630154919684
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6288724722759474,
+            0.9969710971098532
+          ],
+          "sensor_wins_vs_latest_lab_runs": "0/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6311823652602924,
+            0.9889635837723124
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "0/29"
+        }
+      }
+    },
+    "process_all|gbr|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.2399028642344139,
+            "mape_pct": 162.31662322546077,
+            "rmse_ci95": [
+              1.0677223097000015,
+              1.4372095942123286
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.815920588823224,
+            "mape_pct": 78.45661464467146,
+            "rmse_ci95": [
+              0.6923028082119334,
+              0.9699787713802646
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.27759198233739923,
+            0.5760093507893111
+          ],
+          "sensor_wins_vs_latest_lab_runs": "5/38"
+        },
+        "same_grade_defined": {
+          "n": 319,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.2489347981422037,
+            "mape_pct": 164.03867289502168,
+            "rmse_ci95": [
+              1.0686481959630887,
+              1.4543442250845078
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8185350220233051,
+            "mape_pct": 78.67964930632616,
+            "rmse_ci95": [
+              0.6923868276276505,
+              0.9725895630544719
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.48311563178625994,
+            "mape_pct": 35.17480805974459,
+            "rmse_ci95": [
+              0.39381947048629407,
+              0.5855399628589556
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.28344626145990814,
+            0.5796002740959783
+          ],
+          "sensor_wins_vs_latest_lab_runs": "5/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6228802207746055,
+            0.920325628204168
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "2/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 108,
+          "n_runs": 37,
+          "sensor": {
+            "rmse_log": 1.5031312971119366,
+            "mape_pct": 264.13535122966084,
+            "rmse_ci95": [
+              1.3107476574717556,
+              1.688852074741991
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.2836835231193886,
+            "mape_pct": 174.88949374779943,
+            "rmse_ci95": [
+              1.112783461751102,
+              1.4529176711020104
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.044478451879123033,
+            0.40506526428667483
+          ],
+          "sensor_wins_vs_latest_lab_runs": "13/37"
+        },
+        "same_grade_defined": {
+          "n": 102,
+          "n_runs": 35,
+          "sensor": {
+            "rmse_log": 1.540187953390703,
+            "mape_pct": 275.51031409843654,
+            "rmse_ci95": [
+              1.3501605879804488,
+              1.7215576382543403
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.3110984402349213,
+            "mape_pct": 181.25954601923684,
+            "rmse_ci95": [
+              1.1392034432164462,
+              1.470699945834243
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5945902457470924,
+            "mape_pct": 45.20028761081026,
+            "rmse_ci95": [
+              0.4820815536833735,
+              0.7039574458051449
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.05475255617886069,
+            0.4114344618200793
+          ],
+          "sensor_wins_vs_latest_lab_runs": "12/35",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.7611414135954733,
+            1.131558688766946
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "3/35"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 1.0853573227852802,
+            "mape_pct": 111.64186458742573,
+            "rmse_ci95": [
+              0.9052337784077424,
+              1.2984064392212054
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3308356672202112,
+              0.5459765794069756
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.5038718187516124,
+            0.8369793649445121
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 1.0853573227852802,
+            "mape_pct": 111.64186458742573,
+            "rmse_ci95": [
+              0.9067756935121419,
+              1.3163029488542455
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.32972801112930195,
+              0.5368040725108726
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3363172121360312,
+              0.5395068325766685
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.4984940587908507,
+            0.8346185744267072
+          ],
+          "sensor_wins_vs_latest_lab_runs": "2/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.4999679531801867,
+            0.840378818103951
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "2/29"
+        }
+      }
+    },
+    "process_all+upstream_MI|ridge|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 327,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 2.17579569947444,
+            "mape_pct": 1575884.2800998865,
+            "rmse_ci95": [
+              1.2758314329873712,
+              2.9504646609903227
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5586628732050338,
+            "mape_pct": 42.7436043205999,
+            "rmse_ci95": [
+              0.46885490280780234,
+              0.6655304795052546
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6856320495723243,
+            2.42570395888487
+          ],
+          "sensor_wins_vs_latest_lab_runs": "4/38"
+        },
+        "same_grade_defined": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 2.182227014545247,
+            "mape_pct": 1585581.709092805,
+            "rmse_ci95": [
+              1.3019638136643035,
+              2.9469188455761652
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5600780087120059,
+            "mape_pct": 42.88831209826738,
+            "rmse_ci95": [
+              0.46652603752265015,
+              0.6669828562045664
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.41152640452076006,
+            "mape_pct": 27.26658554425116,
+            "rmse_ci95": [
+              0.34519768610663154,
+              0.49594535764997555
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.6767441405261844,
+            2.4670251319720617
+          ],
+          "sensor_wins_vs_latest_lab_runs": "4/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.858980039010406,
+            2.56542978134535
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "0/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 110,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.7014830387825703,
+            "mape_pct": 1017.0482538089109,
+            "rmse_ci95": [
+              1.246814630661338,
+              2.176130990091458
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8732531486607341,
+            "mape_pct": 90.35809231907015,
+            "rmse_ci95": [
+              0.7090614433054843,
+              1.0218888052791801
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.37199355059882716,
+            1.2842026330485234
+          ],
+          "sensor_wins_vs_latest_lab_runs": "9/38"
+        },
+        "same_grade_defined": {
+          "n": 108,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.716196713354449,
+            "mape_pct": 1034.9182446091347,
+            "rmse_ci95": [
+              1.246664425121982,
+              2.198854523182034
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8807253881161351,
+            "mape_pct": 91.67530531665228,
+            "rmse_ci95": [
+              0.7289203403730349,
+              1.0268935090582665
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5842436189470571,
+            "mape_pct": 44.66548003836274,
+            "rmse_ci95": [
+              0.4770910879417768,
+              0.6890556044040416
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.3560803156772718,
+            1.3414384700431368
+          ],
+          "sensor_wins_vs_latest_lab_runs": "9/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6509379780930177,
+            1.6340566004063395
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "5/38"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 2.3804034107188166,
+            "mape_pct": 2374204.075044903,
+            "rmse_ci95": [
+              1.206389590219087,
+              3.317010353848071
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21352775207128938,
+              0.3816147563354012
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.9169830690890719,
+            3.0417567597586936
+          ],
+          "sensor_wins_vs_latest_lab_runs": "1/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 2.3804034107188166,
+            "mape_pct": 2374204.075044903,
+            "rmse_ci95": [
+              1.1989094894609975,
+              3.33151579139429
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.2143783714426676,
+              0.3973806473743514
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21372176927533376,
+              0.38889736286020693
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.8719151066829913,
+            3.040137466207784
+          ],
+          "sensor_wins_vs_latest_lab_runs": "1/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.8995937370021296,
+            3.038242781305621
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "1/29"
+        }
+      }
+    },
+    "process_all+upstream_MI|ridge|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 2.1806868757994824,
+            "mape_pct": 1585581.6137940127,
+            "rmse_ci95": [
+              1.2890693541111595,
+              2.9544772327889675
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.815920588823224,
+            "mape_pct": 78.45661464467146,
+            "rmse_ci95": [
+              0.6864256188025859,
+              0.9759448766705612
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.43167293170929144,
+            2.200940369927135
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/38"
+        },
+        "same_grade_defined": {
+          "n": 319,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 2.199664828172674,
+            "mape_pct": 1615403.0408761555,
+            "rmse_ci95": [
+              1.3062109862911824,
+              2.941116720108868
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8185350220233051,
+            "mape_pct": 78.67964930632616,
+            "rmse_ci95": [
+              0.6886623074215594,
+              0.9755176042585616
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.48311563178625994,
+            "mape_pct": 35.17480805974459,
+            "rmse_ci95": [
+              0.3927199577211389,
+              0.5847777475566348
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.4415369352881943,
+            2.188105137101668
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.8072339677068786,
+            2.5418106947304566
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "0/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 108,
+          "n_runs": 37,
+          "sensor": {
+            "rmse_log": 1.71029543156219,
+            "mape_pct": 1034.6314658354688,
+            "rmse_ci95": [
+              1.2431445337057927,
+              2.1903422122893588
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.2836835231193886,
+            "mape_pct": 174.88949374779943,
+            "rmse_ci95": [
+              1.1097077370799941,
+              1.4493722067931065
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.05844410273678287,
+            0.9394503226420036
+          ],
+          "sensor_wins_vs_latest_lab_runs": "15/37"
+        },
+        "same_grade_defined": {
+          "n": 102,
+          "n_runs": 35,
+          "sensor": {
+            "rmse_log": 1.7542610933889313,
+            "mape_pct": 1091.0368112717397,
+            "rmse_ci95": [
+              1.276725648254117,
+              2.23257747172766
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.3110984402349213,
+            "mape_pct": 181.25954601923684,
+            "rmse_ci95": [
+              1.1343023795773008,
+              1.4759641718576693
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5945902457470924,
+            "mape_pct": 45.20028761081026,
+            "rmse_ci95": [
+              0.483117993007401,
+              0.7000004417954955
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.072439126003113,
+            0.9945632928972737
+          ],
+          "sensor_wins_vs_latest_lab_runs": "14/35",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.6599787594623593,
+            1.659539082155348
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/35"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 2.3804034107188166,
+            "mape_pct": 2374204.075044903,
+            "rmse_ci95": [
+              1.2086101116568995,
+              3.357456597155089
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3333773635413998,
+              0.538406250946396
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.7592630507989363,
+            2.9559987831575714
+          ],
+          "sensor_wins_vs_latest_lab_runs": "1/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 2.3804034107188166,
+            "mape_pct": 2374204.075044903,
+            "rmse_ci95": [
+              1.199405405742356,
+              3.29563726077561
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.33744013470260487,
+              0.5332736326964116
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3360369644355156,
+              0.5393576228198901
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.7301418658793238,
+            2.9813762987208885
+          ],
+          "sensor_wins_vs_latest_lab_runs": "1/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.7730574601532398,
+            2.950670394194765
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "1/29"
+        }
+      }
+    },
+    "process_all+upstream_MI|ridge_clip|lag1": {
+      "all": {
+        "all_eval_samples": {
+          "n": 327,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 0.9633797478904847,
+            "mape_pct": 110.38259072920393,
+            "rmse_ci95": [
+              0.7769563750633194,
+              1.1698948385443313
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5586628732050338,
+            "mape_pct": 42.7436043205999,
+            "rmse_ci95": [
+              0.46737334279175885,
+              0.6694137405222395
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.24871618743229829,
+            0.5805851477258447
+          ],
+          "sensor_wins_vs_latest_lab_runs": "9/38"
+        },
+        "same_grade_defined": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 0.9658809203010056,
+            "mape_pct": 110.78733460392037,
+            "rmse_ci95": [
+              0.7714080391362984,
+              1.194051152018519
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.5600780087120059,
+            "mape_pct": 42.88831209826738,
+            "rmse_ci95": [
+              0.4687071877007146,
+              0.6714889128547912
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.41152640452076006,
+            "mape_pct": 27.26658554425116,
+            "rmse_ci95": [
+              0.34309651192842977,
+              0.48932844869540354
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.24644518962508505,
+            0.5718644912808108
+          ],
+          "sensor_wins_vs_latest_lab_runs": "9/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.3907002783404124,
+            0.7457387184908083
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "4/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 110,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.2601494207682302,
+            "mape_pct": 191.68377236715148,
+            "rmse_ci95": [
+              1.0709745090855591,
+              1.4299147963883565
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8732531486607341,
+            "mape_pct": 90.35809231907015,
+            "rmse_ci95": [
+              0.7320408172319888,
+              1.0129537699539461
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.1795010309164064,
+            0.5685433499984414
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/38"
+        },
+        "same_grade_defined": {
+          "n": 108,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 1.2707153140874194,
+            "mape_pct": 194.40732905751022,
+            "rmse_ci95": [
+              1.0865724775230763,
+              1.4422528236235006
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8807253881161351,
+            "mape_pct": 91.67530531665228,
+            "rmse_ci95": [
+              0.7268668110446246,
+              1.0249077556573942
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5842436189470571,
+            "mape_pct": 44.66548003836274,
+            "rmse_ci95": [
+              0.4799375132249955,
+              0.6828969510175588
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.1902095955935409,
+            0.5845379231754742
+          ],
+          "sensor_wins_vs_latest_lab_runs": "11/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.47626569639957783,
+            0.8856130773930436
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/38"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 0.7704551717214456,
+            "mape_pct": 69.17001017540561,
+            "rmse_ci95": [
+              0.5844995354438861,
+              1.0116388437570047
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21547115552350848,
+              0.3978168554346312
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.3016733130476006,
+            0.7100852068690386
+          ],
+          "sensor_wins_vs_latest_lab_runs": "4/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 0.7704551717214456,
+            "mape_pct": 69.17001017540561,
+            "rmse_ci95": [
+              0.578306569032996,
+              1.0140674185271241
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.21469892417328942,
+              0.40004739343606277
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.2894079332565104,
+            "mape_pct": 18.607227915845396,
+            "rmse_ci95": [
+              0.2140110061164814,
+              0.3935392006793429
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.2929093081793098,
+            0.6992820402132042
+          ],
+          "sensor_wins_vs_latest_lab_runs": "4/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.29580835634237296,
+            0.7149311459840253
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "4/29"
+        }
+      }
+    },
+    "process_all+upstream_MI|ridge_clip|lag3": {
+      "all": {
+        "all_eval_samples": {
+          "n": 325,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 0.9620899519273166,
+            "mape_pct": 110.64295833287466,
+            "rmse_ci95": [
+              0.7719415102563165,
+              1.1869226714934067
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.815920588823224,
+            "mape_pct": 78.45661464467146,
+            "rmse_ci95": [
+              0.6940348110995855,
+              0.966887065349375
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.004992001587757602,
+            0.30991377581013646
+          ],
+          "sensor_wins_vs_latest_lab_runs": "15/38"
+        },
+        "same_grade_defined": {
+          "n": 319,
+          "n_runs": 38,
+          "sensor": {
+            "rmse_log": 0.9693567496941923,
+            "mape_pct": 111.88281723357713,
+            "rmse_ci95": [
+              0.776371646466257,
+              1.2092176385974023
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.8185350220233051,
+            "mape_pct": 78.67964930632616,
+            "rmse_ci95": [
+              0.689430958977523,
+              0.9724159482489146
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.48311563178625994,
+            "mape_pct": 35.17480805974459,
+            "rmse_ci95": [
+              0.3921395883267086,
+              0.5817264984470357
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.008371660557256256,
+            0.30574217836771245
+          ],
+          "sensor_wins_vs_latest_lab_runs": "15/38",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.31647419681480543,
+            0.6646536163359817
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/38"
+        }
+      },
+      "transition": {
+        "all_eval_samples": {
+          "n": 108,
+          "n_runs": 37,
+          "sensor": {
+            "rmse_log": 1.2620313406833066,
+            "mape_pct": 193.97286342704854,
+            "rmse_ci95": [
+              1.0812102371939372,
+              1.4426452310675275
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.2836835231193886,
+            "mape_pct": 174.88949374779943,
+            "rmse_ci95": [
+              1.1128360549884635,
+              1.4499918142406427
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.21041822460488227,
+            0.1830280939549795
+          ],
+          "sensor_wins_vs_latest_lab_runs": "20/37"
+        },
+        "same_grade_defined": {
+          "n": 102,
+          "n_runs": 35,
+          "sensor": {
+            "rmse_log": 1.2945500235128597,
+            "mape_pct": 202.7522204847852,
+            "rmse_ci95": [
+              1.1025450865905946,
+              1.4738353039714138
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 1.3110984402349213,
+            "mape_pct": 181.25954601923684,
+            "rmse_ci95": [
+              1.139993792640305,
+              1.4752877550873111
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.5945902457470924,
+            "mape_pct": 45.20028761081026,
+            "rmse_ci95": [
+              0.48039922725809,
+              0.7051993341231364
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            -0.21506353443585924,
+            0.20196719657946374
+          ],
+          "sensor_wins_vs_latest_lab_runs": "19/35",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.4810102756862482,
+            0.8961863709495874
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "8/35"
+        }
+      },
+      "steady": {
+        "all_eval_samples": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 0.7704551717214456,
+            "mape_pct": 69.17001017540561,
+            "rmse_ci95": [
+              0.5792725231221012,
+              1.0097913999316126
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.33449455714237164,
+              0.53441349710361
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.1868022458684915,
+            0.5401901280215363
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/29"
+        },
+        "same_grade_defined": {
+          "n": 217,
+          "n_runs": 29,
+          "sensor": {
+            "rmse_log": 0.7704551717214456,
+            "mape_pct": 69.17001017540561,
+            "rmse_ci95": [
+              0.5702393546893418,
+              1.0103243519071512
+            ]
+          },
+          "latest_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.3300135294577806,
+              0.5414320749051444
+            ]
+          },
+          "same_grade_lab": {
+            "rmse_log": 0.4206315008236871,
+            "mape_pct": 30.462370667077778,
+            "rmse_ci95": [
+              0.33247677443286583,
+              0.5376743244982034
+            ]
+          },
+          "sensor_minus_latest_lab_rmse_ci95": [
+            0.18417932220174826,
+            0.5379305616185841
+          ],
+          "sensor_wins_vs_latest_lab_runs": "7/29",
+          "sensor_minus_same_grade_lab_rmse_ci95": [
+            0.1892939905923663,
+            0.532600486903791
+          ],
+          "sensor_wins_vs_same_grade_lab_runs": "7/29"
+        }
+      }
+    }
+  }
+}
